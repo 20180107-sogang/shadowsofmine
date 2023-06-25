@@ -34,6 +34,11 @@
         var audio = document.getElementById("myAudio");
         audio.play();
       }
+      window.addEventListener("copy", (e) => {
+        alert("보안 정책에 의해 복사를 허용하지 않습니다.");
+        e.preventDefault();
+        e.clipboardData.clearData("Text");
+      });
     </script>
   </head>
   <body>
