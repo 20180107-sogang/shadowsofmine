@@ -39,9 +39,10 @@
         e.preventDefault();
         e.clipboardData.clearData("Text");
       });
+      document.oncontextmenu = function(){return false;}
     </script>
   </head>
-  <body>
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
     <div>
       <button onclick="playAudio()">BGM</button>
       <audio id="myAudio">
